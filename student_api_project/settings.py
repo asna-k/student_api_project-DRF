@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xfm%4q86_v$%70woqb4lq4_f1w@*!an77sc^sfovo87hdh*!9(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ "student-api-project-drf.onrender.com",]
 
 CORS_ALLOWED_ORIGINS = [
     "https://react-drf.vercel.app",
@@ -49,13 +49,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'student_api_project.urls'
